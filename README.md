@@ -7,8 +7,9 @@ Hi i'm Ars, it is a program written in Python that when you enter  url or link o
 
 sudo apt update
 
+sudo apt upgrade
+
 sudo apt install python3-qrcode
 
-sudo apt upgrade
 
 ### :)
