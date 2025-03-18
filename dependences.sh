@@ -1,44 +1,32 @@
 #!/bin/bash
 
+# Función para verificar si pip está instalado
 verificar_pip() {
-    echo "Checking if pip is installed"
+    echo "Checking if pip is installed..."
     if command -v pip &>/dev/null; then
-        echo "pip is installed"
+        echo "pip is already installed."
     else
-        echo "Installing pip..."
+        echo "pip is not installed. Installing pip..."
         python3 -m ensurepip --upgrade
         if [ $? -eq 0 ]; then
             echo "pip has been installed successfully."
         else
-            echo "Error"
+            echo "Error installing pip."
             exit 1
         fi
     fi
 }
 
-instalar_customtkinter() {
-    echo "Installing CustomTkinter..."
-    pip install customtkinter
+instalar_qrcode() {
+    echo "Installing QRcode..."
+    pip install qrcode --break-system-packages
     if [ $? -eq 0 ]; then
-        echo "¡CustomTkinter has been installed successfully!"
+        echo "¡QRcode has been installed successfully!"
     else
-        echo "Error"
-        exit 1
-    fi
-}
-
-verificar_tkinter() {
-    echo "Checking if tkinter is installed..."
-    python3 -c "import tkinter" 2>/dev/null
-    if [ $? -eq 0 ]; then
-        echo "tkinter is already installed."
-    else
-        echo "tkinter is not installed."
-        echo "If you're on Linux, install it with: sudo apt-get install python3-tk"
+        echo "Error installing qrcode"
         exit 1
     fi
 }
 
 verificar_pip
-verificar_tkinter
-instalar_customtkinter
+instalar_qrcode
