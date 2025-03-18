@@ -9,7 +9,7 @@ chmod +x dependences.sh
 
 ./dependences.sh
 
-## Dependences and installing (windows and others sistems)
+## Dependences and installing (Windows and others sistems)
 
 
 
