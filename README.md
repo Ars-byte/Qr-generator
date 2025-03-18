@@ -3,13 +3,15 @@
 Hi i'm Ars, it is a program written in Python that when you enter  url or link of a web page, it returns a QR code in png format.
 
 
-## Dependences and installing
+## Dependences and installing (linux)
 
-sudo apt update
+chmod +x dependences.sh
 
-sudo apt upgrade
+./dependences.sh
 
-sudo apt install python3-qrcode
+## Dependences and installing (windows and others sistems)
+
+
 
 
 ### :)
